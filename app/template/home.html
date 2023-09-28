@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: rgb(32, 33, 36);
+        color: #fff;
+      }
+      .icon-container {
+        display: inline-block;
+        width: 2rem;
+        text-align: center;
+      }
+      .list-group-item {
+        cursor: pointer;
+        color: #fff;
+        background-color: #2e3338;
+      }
+      .list-group-item:hover {
+        background-color: #495057;
+        color: #fff;
+      }
+      .list-group-item:active {
+        background-color: #343a40;
+        color: #fff;
+      }
+    </style>
+
+    <title>ACE API</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <ul class="list-group">
+        <li class="list-group-item" onclick="location.href='/temp?celsius=10';">
+          <span class="icon-container"
+            ><i class="fa fa-thermometer-half" aria-hidden="true"></i
+          ></span>
+          Temperature
+        </li>
+        <li class="list-group-item" onclick="location.href='/prime?limit=10';">
+          <span class="icon-container"
+            ><i class="fa fa-hashtag" aria-hidden="true"></i
+          ></span>
+          Prime Numbers
+        </li>
+        <li class="list-group-item" onclick="location.href='/number?n=10';">
+          <span class="icon-container"
+            ><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i
+          ></span>
+          Numbers
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

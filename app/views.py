@@ -5,6 +5,10 @@ from .functions import *
 views = Blueprint("views", __name__)
 
 
+@views.route("/", methods=["GET"])
+def home():
+    return render_template("home.html")
+
 @views.route('/temp', methods=['GET'])
 def temp():
     celsius = request.args.get('celsius', type=float)
@@ -24,6 +28,6 @@ def prime():
 @views.route('/number', methods=['GET'])
 def number():
     n = request.args.get('n', type=int)
-    if n is None or n <= 0:
+    if n is None or not (0 <= n <= 250):
         abort(400, description="Parameter 'n' is invalid")
     return jsonify(fibonacci(n))

@@ -13,9 +13,16 @@ def primes(limit):
 
     return [i for i in range(2, limit+1) if isPrime[i]]
 
-def fibonacci(n, cache={}):
+def fibonacci_recursive(n, cache={}):
     if n <= 1:
         return n
     if n not in cache:
         cache[n] = fibonacci(n-1) + fibonacci(n-2)
     return cache[n]
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+        print(a, b)
+    return a
